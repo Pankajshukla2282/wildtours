@@ -1,5 +1,5 @@
 <?php
-**
+/**
  * Enqueue scripts and styles.
  */
 function wildtours_scripts() {
