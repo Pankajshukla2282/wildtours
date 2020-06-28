@@ -55,7 +55,7 @@ if ( ! function_exists( 'getwid_base_header_style' ) ) :
 			?>
 			.site-title,
 			.site-description {
-				position: absolute;
+				position: fixed;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
 			<?php
