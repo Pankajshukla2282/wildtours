@@ -1,19 +1,14 @@
-@charset "UTF-8";
-/*!
+/*
 Theme Name: Wild Tours
-Theme URI: https://www.kenbank.com/wildtours/
+Theme URI: https://www.pannawildtour.com/
 Description: This is child theme of Getwid Base WordPress theme
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: wildtours
 Tags: wild-tours
 Template: getwid-base
 Author: Pankaj Shukla
-Author URI:   https://www.kenbank.com
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Author URI: https://www.pannawildtour.com/
 
-This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 */
-@import url("../getwid-base/style.css");
