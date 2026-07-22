@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Panna Wild Tours 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-22 00:00+0000\n"
+"PO-Revision-Date: 2026-07-22 00:00+0000\n"
+"Last-Translator: Panna Wild Tours <support@pannawildtour.com>\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: GitHub Copilot\n"
+"X-Textdomain: wildtours\n"
+
+#: inc/template-functions.php:15
+msgid "Live the Nature!"
+msgstr "Live the Nature!"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Booking"
+msgstr "Booking"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "The Panna Jungles"
+msgstr "The Panna Jungles"
+
+msgid "Recent updates"
+msgstr "Recent updates"
+
+msgid "The Services We Offer"
+msgstr "The Services We Offer"
+
+msgid "Concierge Service"
+msgstr "Concierge Service"
+
+msgid "On-demand Service"
+msgstr "On-demand Service"
+
+msgid "Special Service"
+msgstr "Special Service"
+
+msgid "Special Memories"
+msgstr "Special Memories"
+
+msgid "What People Say About Us"
+msgstr "What People Say About Us"
+
+msgid "Reach to us"
+msgstr "Reach to us"
+
+msgid "Archived Information"
+msgstr "Archived Information"
+
+msgid "Some pages below"
+msgstr "Some pages below"
+
+msgid "Panna Wild Tours © 2026. All Rights Reserved."
+msgstr "Panna Wild Tours © 2026. All Rights Reserved."
