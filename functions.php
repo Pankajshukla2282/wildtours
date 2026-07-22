@@ -14,6 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once get_stylesheet_directory() . '/inc/custom-header.php';
 require_once get_stylesheet_directory() . '/inc/template-functions.php';
+require_once get_stylesheet_directory() . '/inc/seo.php';
+require_once get_stylesheet_directory() . '/inc/page-content.php';
+require_once get_stylesheet_directory() . '/inc/content-enhancements.php';
 
 add_action( 'after_setup_theme', 'wildtours_setup' );
 function wildtours_setup() {
@@ -52,6 +55,8 @@ function wildtours_styles() {
         $custom_version,
         'all'
     );
+
+    add_action( 'wp_head', 'wildtours_preconnect_resources', 1 );
 }
 
 add_action( 'wp_enqueue_scripts', 'wildtours_scripts' );
@@ -62,3 +67,6 @@ function wildtours_scripts() {
         true
     );
 }
+
+add_action( 'wp_head', 'wildtours_seo_meta' );
+add_action( 'wp_head', 'wildtours_json_ld' );
