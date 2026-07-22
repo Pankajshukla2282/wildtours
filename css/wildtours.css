@@ -71,10 +71,30 @@ a.button:hover {
 .wp-block-group,
 .widget,
 .wp-block-cover,
-.wp-block-columns {
+.wp-block-columns,
+.wp-block-getwid-section__wrapper,
+.wp-block-getwid-section__inner-wrapper,
+.wp-block-getwid-card,
+.wp-block-getwid-box,
+.wp-block-getwid-icon-box,
+.wp-block-getwid-person,
+.wp-block-getwid-pricing-box {
     border: 1px solid var( --border-color );
     background: var( --surface );
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.wp-block-cover .wp-block-cover__inner-container,
+.wp-block-getwid-section__wrapper,
+.wp-block-getwid-section__inner-wrapper,
+.wp-block-getwid-card,
+.wp-block-getwid-box,
+.wp-block-getwid-icon-box,
+.wp-block-getwid-person,
+.wp-block-getwid-pricing-box {
+    padding: 1.5rem;
 }
 
 .site-footer {
@@ -90,6 +110,8 @@ a.button {
     border: 1px solid var( --brand );
     color: var( --surface );
     cursor: pointer;
+    padding: 0.9rem 1.4rem;
+    border-radius: 0.7rem;
 }
 
 button:focus,
@@ -99,6 +121,20 @@ a.button:focus {
     outline-offset: 2px;
 }
 
+.entry-content {
+    padding: 2rem 0;
+}
+
+.wp-block-getwid-advanced-heading .wp-block-getwid-advanced-heading__content,
+.wp-block-getwid-advanced-heading h2 {
+    color: var( --brand-dark );
+}
+
+.wp-block-getwid-section__wrapper,
+.wp-block-getwid-section__inner-wrapper {
+    background: rgba(255, 255, 255, 0.96);
+}
+
 .entry-content img,
 .wp-block-image img,
 .wp-block-gallery img {
@@ -106,13 +142,9 @@ a.button:focus {
     height: auto;
 }
 
-.page.type-page header.entry-header,
+..page.type-page header.entry-header,
 .home.page header.entry-header,
 .single .post.type-post header.entry-header .entry-title {
-    display: none;
-}
-
-.page.type-page .entry-content > p:first-child {
     display: none;
 }
 
@@ -176,4 +208,107 @@ a.button:focus {
 
 .page-content-block li {
     margin-bottom: 0.75rem;
+}
+
+.wildtours-upi-payment {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(22, 58, 39, 0.16);
+    border-radius: 1rem;
+    box-shadow: 0 18px 50px rgba(22, 58, 39, 0.05);
+}
+
+.wildtours-upi-payment-inner {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.wildtours-upi-details {
+    display: grid;
+    gap: 1rem;
+}
+
+.wildtours-upi-details h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: #163a27;
+}
+
+.wildtours-upi-details p {
+    margin: 0;
+    color: #354d3b;
+}
+
+.wildtours-upi-field {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.wildtours-upi-field label {
+    font-weight: 600;
+    color: #173523;
+}
+
+.wildtours-upi-field input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(22, 58, 39, 0.16);
+    border-radius: 0.75rem;
+    background: #fafaf7;
+    color: #0f2c19;
+}
+
+.wildtours-upi-copy,
+.wildtours-upi-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.95rem 1.2rem;
+    border-radius: 0.85rem;
+    border: none;
+    background: #16422a;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.wildtours-upi-copy:hover,
+.wildtours-upi-button:hover {
+    background: #1d593f;
+}
+
+.wildtours-upi-actions {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.wildtours-upi-note {
+    color: #4b5f4c;
+    font-size: 0.95rem;
+}
+
+.wildtours-upi-qr {
+    display: grid;
+    gap: 0.75rem;
+    justify-items: center;
+}
+
+.wildtours-upi-qr img {
+    max-width: 280px;
+    width: 100%;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(22, 58, 39, 0.12);
+}
+
+@media (min-width: 768px) {
+    .wildtours-upi-payment-inner {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: start;
+    }
 }

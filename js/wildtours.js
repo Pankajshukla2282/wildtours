@@ -27,4 +27,28 @@
     if ( 'scrollBehavior' in document.documentElement.style ) {
         initSmoothScroll();
     }
+
+    function initUpiCopyButtons() {
+        var copyButtons = document.querySelectorAll( '.wildtours-upi-copy' );
+        copyButtons.forEach( function ( button ) {
+            button.addEventListener( 'click', function () {
+                var value = button.getAttribute( 'data-copy-text' );
+                if ( ! value ) {
+                    return;
+                }
+
+                navigator.clipboard.writeText( value ).then( function () {
+                    var originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    setTimeout( function () {
+                        button.textContent = originalText;
+                    }, 2000 );
+                } ).catch( function () {
+                    button.textContent = 'Copy failed';
+                } );
+            } );
+        } );
+    }
+
+    initUpiCopyButtons();
 })();

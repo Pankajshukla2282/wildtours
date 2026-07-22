@@ -1,0 +1,67 @@
+# WordPress core and runtime files
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backups/
+wp-content/backup-db/
+wp-content/backup-*/
+
+# PHPStorm / IDE / editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Python environment
+.venv/
+venv/
+ENV/
+.env
+
+# Node dependencies
+node_modules/
+
+# Build artifacts / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+npm-shrinkwrap.json
+coverage/
+.dist/
+build/
+public/
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Generated and temporary files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# Live preview / temporary admin artifacts
+live-homepage.html
+
+# Backup and export files
+*.bak
+*.orig
+*.backup
+
+# Ignore any plugin temporary work or local export files
+*.log
+*.sql
+*.sqlite
+*.zip
+*.tar.gz
+*.rar
+
+# Composer vendor directory if present
+vendor/

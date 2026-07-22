@@ -89,15 +89,22 @@ if ( ! function_exists( 'wildtours_seo_url' ) ) {
 if ( ! function_exists( 'wildtours_seo_image' ) ) {
     function wildtours_seo_image() {
         if ( is_singular() && has_post_thumbnail() ) {
-            return get_the_post_thumbnail_url( null, 'full' );
+            $url = get_the_post_thumbnail_url( null, 'wildtours-social' );
+            if ( $url ) {
+                return $url;
+            }
         }
 
-        $default = get_stylesheet_directory_uri() . '/images/seo-default.jpg';
+        if ( is_front_page() && has_header_image() ) {
+            return get_header_image();
+        }
+
+        $default_image = get_stylesheet_directory_uri() . '/screenshot.png';
         if ( file_exists( get_stylesheet_directory() . '/images/seo-default.jpg' ) ) {
-            return esc_url( $default );
+            $default_image = get_stylesheet_directory_uri() . '/images/seo-default.jpg';
         }
 
-        return get_stylesheet_directory_uri() . '/screenshot.png';
+        return esc_url( $default_image );
     }
 }
 

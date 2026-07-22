@@ -17,11 +17,15 @@ require_once get_stylesheet_directory() . '/inc/template-functions.php';
 require_once get_stylesheet_directory() . '/inc/seo.php';
 require_once get_stylesheet_directory() . '/inc/page-content.php';
 require_once get_stylesheet_directory() . '/inc/content-enhancements.php';
+require_once get_stylesheet_directory() . '/inc/upi-payment.php';
 
 add_action( 'after_setup_theme', 'wildtours_setup' );
 function wildtours_setup() {
     load_child_theme_textdomain( 'wildtours', get_stylesheet_directory() . '/languages' );
 
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails' );
+    add_image_size( 'wildtours-social', 1200, 630, true );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'html5', array(
         'caption',
