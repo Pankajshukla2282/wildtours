@@ -1,0 +1,19 @@
+name: Theme Check
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run WordPress Theme Check
+        run: |
+          if ! command -v npm >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y npm
+          fi
+          npm install -g @wordpress/theme-check
+          theme-check .
