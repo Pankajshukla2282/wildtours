@@ -21,24 +21,24 @@ if ( ! function_exists( 'wildtours_seo_meta' ) ) {
         $image = wildtours_seo_image();
         $site_name = get_bloginfo( 'name' );
 
-        echo '<meta name="description" content="' . esc_attr( $description ) . '" />\n';
-        echo '<link rel="canonical" href="' . esc_url( $url ) . '" />\n';
-        echo '<meta property="og:locale" content="' . esc_attr( get_locale() ) . '" />\n';
-        echo '<meta property="og:type" content="' . esc_attr( is_singular() ? 'article' : 'website' ) . '" />\n';
-        echo '<meta property="og:title" content="' . esc_attr( $title ) . '" />\n';
-        echo '<meta property="og:description" content="' . esc_attr( $description ) . '" />\n';
-        echo '<meta property="og:url" content="' . esc_url( $url ) . '" />\n';
+        echo '<meta name="description" content="' . esc_attr( $description ) . '" />';
+        echo '<link rel="canonical" href="' . esc_url( $url ) . '" />';
+        echo '<meta property="og:locale" content="' . esc_attr( get_locale() ) . '" />';
+        echo '<meta property="og:type" content="' . esc_attr( is_singular() ? 'article' : 'website' ) . '" />';
+        echo '<meta property="og:title" content="' . esc_attr( $title ) . '" />';
+        echo '<meta property="og:description" content="' . esc_attr( $description ) . '" />';
+        echo '<meta property="og:url" content="' . esc_url( $url ) . '" />';
         if ( $image ) {
-            echo '<meta property="og:image" content="' . esc_url( $image ) . '" />\n';
+            echo '<meta property="og:image" content="' . esc_url( $image ) . '" />';
         }
-        echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '" />\n';
-        echo '<meta name="twitter:card" content="summary_large_image" />\n';
-        echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '" />\n';
-        echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '" />\n';
+        echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '" />';
+        echo '<meta name="twitter:card" content="summary_large_image" />';
+        echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '" />';
+        echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '" />';
         if ( $image ) {
-            echo '<meta name="twitter:image" content="' . esc_url( $image ) . '" />\n';
+            echo '<meta name="twitter:image" content="' . esc_url( $image ) . '" />';
         }
-        echo '<meta name="robots" content="index, follow" />\n';
+        echo '<meta name="robots" content="index, follow" />';
     }
 }
 
