@@ -15,6 +15,10 @@ if ( ! function_exists( 'wildtours_seo_meta' ) ) {
             return;
         }
 
+        if ( wildtours_is_pwt_singular() ) {
+            return;
+        }
+
         $description = wildtours_seo_description();
         $url = wildtours_seo_url();
         $title = wildtours_seo_title();
@@ -119,6 +123,10 @@ if ( ! function_exists( 'wildtours_preconnect_resources' ) ) {
 if ( ! function_exists( 'wildtours_json_ld' ) ) {
     function wildtours_json_ld() {
         if ( ! is_front_page() && ! is_singular() ) {
+            return;
+        }
+
+        if ( wildtours_is_pwt_singular() || wildtours_is_pwt_payment_page() ) {
             return;
         }
 

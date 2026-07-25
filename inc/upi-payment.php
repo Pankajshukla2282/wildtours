@@ -207,21 +207,7 @@ if ( ! function_exists( 'wildtours_upi_payment_markup' ) ) {
 
 if ( ! function_exists( 'wildtours_append_upi_payment_to_booking' ) ) {
     function wildtours_append_upi_payment_to_booking( $content ) {
-        if ( is_admin() || ! is_main_query() || ! is_page() ) {
-            return $content;
-        }
-
-        $page_title = strtolower( get_the_title() );
-        if ( 'booking' !== $page_title ) {
-            return $content;
-        }
-
-        $upi_html = wildtours_upi_payment_markup();
-        if ( empty( $upi_html ) ) {
-            return $content;
-        }
-
-        return $content . $upi_html;
+        return $content;
     }
     add_filter( 'the_content', 'wildtours_append_upi_payment_to_booking', 25 );
 }

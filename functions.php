@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once get_stylesheet_directory() . '/inc/custom-header.php';
 require_once get_stylesheet_directory() . '/inc/template-functions.php';
+require_once get_stylesheet_directory() . '/inc/plugin-compat.php';
 require_once get_stylesheet_directory() . '/inc/seo.php';
 require_once get_stylesheet_directory() . '/inc/page-content.php';
 require_once get_stylesheet_directory() . '/inc/content-enhancements.php';

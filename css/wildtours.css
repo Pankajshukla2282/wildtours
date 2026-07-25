@@ -142,7 +142,7 @@ a.button:focus {
     height: auto;
 }
 
-..page.type-page header.entry-header,
+.page.type-page header.entry-header,
 .home.page header.entry-header,
 .single .post.type-post header.entry-header .entry-title {
     display: none;
@@ -310,5 +310,182 @@ a.button:focus {
     .wildtours-upi-payment-inner {
         grid-template-columns: 1.5fr 1fr;
         align-items: start;
+    }
+}
+
+/* PWT plugin compatibility */
+.pwt-site,
+.pwt-single-wrap {
+    color: var( --text-color );
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.pwt-site a,
+.pwt-single-wrap a {
+    color: var( --brand );
+}
+
+.pwt-site a:hover,
+.pwt-single-wrap a:hover {
+    color: var( --brand-dark );
+}
+
+.pwt-hero {
+    background:
+        radial-gradient(circle at top left, rgba(255, 209, 109, 0.2), transparent 28%),
+        linear-gradient(135deg, #133624 0%, #1b6d40 52%, #24553a 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 24px 60px rgba(22, 58, 39, 0.16);
+}
+
+.pwt-hero h1,
+.pwt-section-header h1,
+.pwt-section-header h2,
+.pwt-single-package h1,
+.pwt-single-safari h1 {
+    color: var( --brand-dark );
+}
+
+.pwt-hero h1 {
+    color: #ffffff;
+}
+
+.pwt-section,
+.pwt-card,
+.pwt-testimonial-card,
+.pwt-faq-item,
+.pwt-meta-chip,
+.pwt-itinerary-item,
+.pwt-payment-portal,
+.pwt-single-hero {
+    border-color: var( --border-color );
+    box-shadow: 0 18px 40px rgba(22, 58, 39, 0.07);
+}
+
+.pwt-card,
+.pwt-testimonial-card,
+.pwt-faq-item,
+.pwt-meta-chip,
+.pwt-itinerary-item {
+    background: var( --surface );
+}
+
+.pwt-tag {
+    background: rgba(27, 109, 64, 0.12);
+    color: var( --brand-dark );
+}
+
+.pwt-card-body h3,
+.pwt-testimonial-card h3,
+.pwt-faq-item summary,
+.pwt-meta-chip strong,
+.pwt-itinerary-item h3 {
+    color: var( --brand-dark );
+}
+
+.pwt-booking-form,
+.pwt-payment-portal form {
+    display: grid;
+    gap: 1rem;
+}
+
+.pwt-form-grid input,
+.pwt-form-grid select,
+.pwt-form-grid textarea,
+.pwt-payment-portal input,
+.pwt-payment-portal select,
+.pwt-payment-portal textarea {
+    border: 1px solid rgba(22, 58, 39, 0.16);
+    border-radius: 0.75rem;
+    background: #fafaf7;
+    color: var( --text-color );
+    min-height: 48px;
+}
+
+.pwt-form-grid textarea,
+.pwt-payment-portal textarea {
+    min-height: 140px;
+}
+
+.pwt-form-grid input:focus,
+.pwt-form-grid select:focus,
+.pwt-form-grid textarea:focus,
+.pwt-payment-portal input:focus,
+.pwt-payment-portal select:focus,
+.pwt-payment-portal textarea:focus {
+    outline: 3px solid rgba(255, 209, 109, 0.35);
+    outline-offset: 1px;
+    border-color: rgba(27, 109, 64, 0.45);
+}
+
+.pwt-btn,
+.pwt-booking-form button,
+.pwt-payment-portal button,
+.pwt-filter-bar button {
+    background: var( --brand );
+    color: var( --surface );
+    border: 1px solid var( --brand );
+    border-radius: 999px;
+    padding: 0.9rem 1.4rem;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.pwt-btn:hover,
+.pwt-booking-form button:hover,
+.pwt-payment-portal button:hover,
+.pwt-filter-bar button:hover,
+.pwt-btn:focus,
+.pwt-booking-form button:focus,
+.pwt-payment-portal button:focus,
+.pwt-filter-bar button:focus {
+    background: var( --brand-accent );
+    border-color: var( --brand-accent );
+    color: var( --brand-dark );
+}
+
+.pwt-contact-list,
+.pwt-section ul,
+.pwt-section ol {
+    padding-left: 1.2rem;
+}
+
+.pwt-form-message.is-success {
+    color: #1f6f31;
+}
+
+.pwt-form-message.is-error {
+    color: #a12424;
+}
+
+.pwt-filter-bar {
+    margin-top: 1.25rem;
+}
+
+.pwt-single-hero img,
+.pwt-card-image img,
+.pwt-itinerary-image img {
+    border-radius: inherit;
+}
+
+.pwt-site .wp-block-heading,
+.pwt-single-wrap .wp-block-heading {
+    color: var( --brand-dark );
+}
+
+.pwt-site .wp-block-image img,
+.pwt-single-wrap .wp-block-image img {
+    border-radius: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .pwt-booking-form .pwt-form-grid,
+    .pwt-filter-bar .pwt-form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pwt-booking-form .pwt-full-width,
+    .pwt-filter-bar .pwt-full-width {
+        grid-column: 1 / -1;
     }
 }

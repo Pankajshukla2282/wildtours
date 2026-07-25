@@ -18,6 +18,10 @@ if ( ! function_exists( 'wildtours_complete_page_content' ) ) {
             return $content;
         }
 
+        if ( wildtours_is_pwt_owned_request() ) {
+            return $content;
+        }
+
         global $post;
         $title = get_the_title( $post );
         $page_data = wildtours_default_page_content( $title );
@@ -100,6 +104,10 @@ if ( ! function_exists( 'wildtours_monetization_content' ) ) {
 if ( ! function_exists( 'wildtours_inject_ad_after_first_paragraph' ) ) {
     function wildtours_inject_ad_after_first_paragraph( $content ) {
         if ( is_admin() || ! is_singular() || ! in_the_loop() || is_feed() ) {
+            return $content;
+        }
+
+        if ( wildtours_is_pwt_owned_request() ) {
             return $content;
         }
 
